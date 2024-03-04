@@ -57,8 +57,9 @@ node('built-in') {
 					-e TZ=Asia/Ho_Chi_Minh\
                     -p ${SPRING_BOOT_PORT}:8080 \
                     -p ${SAYHI_SOCKET_SERVER_PORT}:4001\
-                    -e SPRING_APPLICATION_JSON='{
-                        "topic.name": "${TOPIC}"}' \
+                                       -e SPRING_APPLICATION_JSON='{
+                        "topic.name": "${TOPIC}", \
+                        "spring.kafka.bootstrap-servers": "${KAFKA}"}' \
 					--restart unless-stopped \
 					registry.hub.docker.com/hoangtan250997/kafka_consumer"""
                     }
