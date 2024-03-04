@@ -60,7 +60,7 @@ node('built-in') {
                     -e SPRING_APPLICATION_JSON='{
                         "topic.name": "${TOPIC}"}' \
 					--restart unless-stopped \
-					hoangtan250997/kafka_producer"""
+					registry.hub.docker.com/hoangtan250997/kafka_consumer"""
                     }
         }
 
